@@ -1,0 +1,12 @@
+MCP Server: An MCP server is a lightweight program that exposes specific tools, resources, or prompts to AI agents via the Model Context Protocol. It acts as a bridge between the AI agent and external systems (such as APIs, databases, or local files), allowing the agent to perform actions or retrieve data in a standardized way. MCP servers can be built in various programming languages and can run locally or remotely, supporting both stdio and HTTP transports.
+MCP (Model Context Protocol) is an open standard that connects AI agents to external data sources, APIs, and tools in a standardized way.
+MCP uses a client-server architecture, where the client (in the host application) communicates with one or more MCP servers.
+MCP servers can expose tools (functions), resources (data), and prompts (templates) to AI agents.
+MCP supports both local (stdio) and remote (HTTP/SSE) transports for communication between clients and servers.
+MCP enables plug-and-play integration: new capabilities can be added to an agent by connecting new MCP servers.
+MCP standardizes authentication and security, supporting OAuth 2.0 for secure access to remote resources.
+MCP is designed to be language-agnostic; servers and clients can be implemented in Python, TypeScript, Java, and more.
+MCP is used in applications like chatbots, coding assistants, and workflow automation agents to enhance their capabilities.
+MCP allows AI agents to discover available tools and resources dynamically at runtime, improving flexibility.
+The MCP ecosystem is growing, with many pre-built servers and community contributions available for rapid integration.
+Prompt usage in MCP: In this project, the @mcp.prompt() decorator is used to define a prompt function (note_summary_prompt) that generates a prompt string asking the AI to summarize all current notes. This prompt can be invoked by the agent to request a summary of the notes stored in notes.txt.

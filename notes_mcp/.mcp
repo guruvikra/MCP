@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "notes": {
+      "name": "notes",
+      "command": "uv",
+      "args": [
+        "--directory",
+        "path/mcp_prac",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
