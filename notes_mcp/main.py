@@ -5,7 +5,7 @@ import os
 # mcp = FastMCP("Demo")
 
 
-# @mcp.tool()
+# @mcp.tool()       
 # def add(a: int, b: int) -> int:
 #     """Add two numbers"""
 #     return a + b
@@ -29,12 +29,12 @@ def ensure_file():
 @mcp.tool()
 def add_note(message: str) -> str:
     """
-    Append a new note to the note file
+    Append a note to the notes file
 
-    Args:
+    args:
         message(str): the content to be added
-    Returns:
-        str: confirmation message indicating note saved
+    returns:
+        str: confirmation message
     """
     ensure_file()
     with open(FILELOC, "a") as f:
@@ -46,7 +46,7 @@ def read_notes() -> str:
     """
     Read and return all notes from the notes file
 
-    Returns:
+    returns:
         All notes as a single string separated by line breaks.
         If no notes exist, a default message is returned.
     """
@@ -58,9 +58,9 @@ def read_notes() -> str:
 @mcp.resource("notes://latest")
 def get_latest_note() -> str:
     """
-    Get the most recently added note from the sticky note file.
+    get the most recently added note from the sticky note file.
 
-    Returns:
+    returns:
         str: The last note entry. If no notes exist, a default message is returned.
     """
     ensure_file()

@@ -5,7 +5,7 @@
       "command": "uv",
       "args": [
         "--directory",
-        "path/mcp_prac",
+        "/home/namlabs/Guru/mcp/mcp_prac",
         "run",
         "main.py"
       ]
